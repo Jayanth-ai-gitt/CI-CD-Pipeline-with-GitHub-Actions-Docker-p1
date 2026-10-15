@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    image: ci-cd-demo:local
+    container_name: ci-cd-demo
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    restart: unless-stopped
